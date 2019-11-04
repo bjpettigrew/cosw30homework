@@ -45,6 +45,9 @@ if($result) {
 
         <!--Add a second password input so the user has to retype their password -->
 
+        <label for="password_confirm">Confirm Password</label>
+        <input type="password" id="password_confirm" name="password_confirm"><br>
+
         <button>Register</button>
     </form>
 
@@ -68,5 +71,6 @@ if($result) {
             </tr>
         </tbody>
     </table>
+
 </body>
 </html>
