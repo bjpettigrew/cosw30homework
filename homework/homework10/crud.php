@@ -38,6 +38,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ( empty($errors)) {
         require('mysqli_connect.php');
 
+//Add query
+
     $query = "INSERT INTO USER_PETTIGREW (first_name, last_name, email,password)
     VALUES ('$fn', '$ln', '$e', '$pw')";
     $r = @mysqli_query($connection, $query);
