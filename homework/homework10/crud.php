@@ -146,7 +146,7 @@ if($result) {
 
 
 
-            // You will be adding a forEach loop here to output the users ?>
+            // You will be adding a forEach loop here to output the users
             echo '<tr><td align="left">' . $row['user_id'] . '</td>
                 <td align="left">' . $row['first_name'] . '</td>
                 <td align="left">' . $row['last_name'] . ' </td>
