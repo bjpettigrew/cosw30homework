@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (!empty ($_POST['password'])) {
         if ($_POST['password'] != $_POST['password_confirm']) {
-            $errors[] = 'Your password does not match confirm password';
+            $errors[] = 'Your password does not match confirmation password';
         } else {
             $pw = trim($_POST['password']);
         }
@@ -36,7 +36,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if ( empty($errors)) {
-        require('database.php');
+        require('mysqli_connect.php');
 
 //Add query
 
@@ -117,7 +117,7 @@ if($result) {
     </form>
 
 <?php
-    require('database.php');
+    require('mysqli_connect.php');
     $query = "SELECT (user_id, first_name, last_name, email, password)
             FROM USER_PETTIGREW
             ORDER BY user_id ASC";
@@ -150,8 +150,8 @@ if($result) {
             echo '<tr><td align="left">' . $row['user_id'] . '</td>
                 <td align="left">' . $row['first_name'] . '</td>
                 <td align="left">' . $row['last_name'] . ' </td>
-                <td align="left">' . $row[email] . '</td>
-                <td align="left">' . $row[password] . '</td></tr>
+                <td align="left">' . $row['email'] . '</td>
+                <td align="left">' . $row['password'] . '</td></tr>
             ';
             }
         echo '</tbody></table>';
