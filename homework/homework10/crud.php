@@ -1,5 +1,8 @@
 <?php
 // Add the database connection
+include('includes/database.php');
+
+
 /*
 *   CHECK IF THE FORM HAS BEEN SUBMITTED AND INSERT
 *   NEW USER INTO THE DATABASE
