@@ -6,7 +6,7 @@
 */
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $errors = [];
-
+//error messages for input form
     if (empty ($_POST['first_name'])) {
         $errors[] = 'You forgot to enter your first name';
     } else {
@@ -25,22 +25,22 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $e = trim($_POST['email']);
     }
 
-    if (!empty ($_POST['password'])) {
-        if ($_POST['password'] != $_POST['password_confirm']) {
+    if (!empty ($_POST['password_og'])) {
+        if ($_POST['password_og'] != $_POST['password_confirm']) {
             $errors[] = 'Your password does not match confirmation password';
         } else {
-            $pw = trim($_POST['password']);
+            $pw = trim($_POST['password_og']);
         }
     } else {
         $errors[] = 'You forgot to enter your password';
     }
 
     if ( empty($errors)) {
-        require('mysqli_connect.php');
+        require('database.php');
 
 //Add query
 
-    $query = "INSERT INTO USER_PETTIGREW (first_name, last_name, email,password)
+    $query = "INSERT INTO USER_PETTIGREW (first_name, last_name, email, password_og)
     VALUES ('$fn', '$ln', '$e', '$pw')";
     $r = @mysqli_query($connection, $query);
     if ($r) {
@@ -60,7 +60,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo'<h1>Error!</h1>
         <p class="error">The following error(s) occurred:<br>';
     foreach ($errors as $msg) {
-        echo " - $msg<br>\n":
+        echo " - $msg<br>\n";
       }
     echo '</p><p>Please try again.</p><p><br></p>';
 
@@ -117,10 +117,10 @@ if($result) {
     </form>
 
 <?php
-    require('mysqli_connect.php');
-    $query = "SELECT (user_id, first_name, last_name, email, password)
+    require('database.php');
+    $query = "SELECT (user_id, first_name, last_name, email, password_og)
             FROM USER_PETTIGREW
-            ORDER BY user_id ASC";
+            ORDER BY first_name ASC";
     $r = @mysqli_query($connection, $query);
 
 
