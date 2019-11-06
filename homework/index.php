@@ -12,3 +12,4 @@ OR die ('Could not connect to MySQL: ' . mysqli_connect_error() );
 
 //set encoding
 mysqli_set_charset ($connection, 'utf8');
+?>
