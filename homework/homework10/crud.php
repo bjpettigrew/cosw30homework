@@ -36,7 +36,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if ( empty($errors)) {
-        require('database.php');
+        require('../database.php');  //add ../
 
 //Add query
 
@@ -117,19 +117,19 @@ if($result) {
     </form>
 
 <?php
-    require('database.php');
-    $query = "SELECT (user_id, first_name, last_name, email, password_og)
+//added ../ to database.php
+    require('../database.php');  //connect to the db
+    $query = "SELECT (user_id, first_name, last_name, email, password_og)  //why is user_id YELLOW?
             FROM USER_PETTIGREW
             ORDER BY first_name ASC";
-    $r = @mysqli_query($connection, $query);
+    $r = @mysqli_query($connection, $query);  //runs teh query from db table USER_PETTIGREW
 
 
     <h2>Output a List of Users</h2>
 
     if ($r) {
 
-        echo
-    '<table width="60%">
+        echo '<table width="60%">
         <thead>
             <tr>
                 <th align="left">User I.D.</th>
@@ -142,7 +142,7 @@ if($result) {
         <tbody>
         ';
 
-        while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+        while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {  //fetches and prints all the records
 
 
 
