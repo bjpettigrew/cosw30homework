@@ -1,6 +1,6 @@
 <?php
 // Add the database connection
-include('includes/database.php');
+//include('includes/database.php');
 
 
 /*

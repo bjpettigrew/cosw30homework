@@ -1,5 +1,7 @@
 <?php
 
+include('includes/database.php');
+
 //make db info into constants
 define('DB_USERNAME_HW10', 'username');
 define('DB_PW_HW10', 'password');
