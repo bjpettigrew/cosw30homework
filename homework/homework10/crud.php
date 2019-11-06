@@ -36,14 +36,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if ( empty($errors)) {
-        require('mysqli_connect.php');
+        require('database.php');
 
 //Add query
 
     $query = "INSERT INTO USER_PETTIGREW (first_name, last_name, email,password)
     VALUES ('$fn', '$ln', '$e', '$pw')";
     $r = @mysqli_query($connection, $query);
-    if $r {
+    if ($r) {
         echo '<h1>Thank you!</h1>
             <p>You are now registered.</p><p><br></p>';
     } else {
@@ -59,7 +59,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         echo'<h1>Error!</h1>
         <p class="error">The following error(s) occurred:<br>';
-    foreach (errors as $msg) {
+    foreach ($errors as $msg) {
         echo " - $msg<br>\n":
       }
     echo '</p><p>Please try again.</p><p><br></p>';
@@ -117,7 +117,7 @@ if($result) {
     </form>
 
 <?php
-    require('mysqli_conect.php');
+    require('database.php');
     $query = "SELECT (user_id, first_name, last_name, email, password)
             FROM USER_PETTIGREW
             ORDER BY user_id ASC";
@@ -128,17 +128,15 @@ if($result) {
 
     if ($r) {
 
-        echo '
-    }
-
-    <table>
+        echo
+    '<table width="60%">
         <thead>
             <tr>
-                <th>User I.D.</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                <th>Password</th>
+                <th align="left">User I.D.</th>
+                <th align="left">First Name</th>
+                <th align="left">Last Name</th>
+                <th align="left">Email</th>
+                <th align="left">Password</th>
             </tr>
         </thead>
         <tbody>
@@ -150,7 +148,7 @@ if($result) {
 
             // You will be adding a forEach loop here to output the users ?>
             echo '<tr><td align="left">' . $row['user_id'] . '</td>
-                <td align="left">' . $row['first_name] . '</td>
+                <td align="left">' . $row['first_name'] . '</td>
                 <td align="left">' . $row['last_name'] . ' </td>
                 <td align="left">' . $row[email] . '</td>
                 <td align="left">' . $row[password] . '</td></tr>
