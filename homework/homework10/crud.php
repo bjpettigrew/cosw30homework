@@ -1,9 +1,20 @@
 <?php
 // Add the database connection
+
+mysqli_set_charset ($connection, 'utf8');
+
+include 'includes database.php';
+
+define ('DB_USERNAME_HW10', 'username');
+define ('DB_PW_HW10', 'password_og');
+define ('DB_HOSTNAME', 'hostname');
+define ('DB_NAME_HW10', 'dbname');
+
+
 /*
 *   CHECK IF THE FORM HAS BEEN SUBMITTED AND INSERT
 *   NEW USER INTO THE DATABASE
-*/
+
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $errors = [];
 //error messages for input form
@@ -36,7 +47,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if ( empty($errors)) {
-        require('../database.php');  //add ../
+        require('database.php');  //add ../
 
 //Add query
 
@@ -118,7 +129,7 @@ if($result) {
 
 <?php
 //added ../ to database.php
-    require('../database.php');  //connect to the db
+    require('database.php');  //connect to the db
     $query = "SELECT (user_id, first_name, last_name, email, password_og)  //why is user_id YELLOW?
             FROM USER_PETTIGREW
             ORDER BY first_name ASC";
