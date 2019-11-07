@@ -1,27 +1,25 @@
 <?php
 // Add the database connection
-<<<<<<< HEAD
 
+include('includes/database.php');
+
+//make db info into constants
+define('DB_USERNAME_HW10', 'username');
+define('DB_PW_HW10', 'password');
+define('DB_HOSTNAME', 'hostname');
+define('DB_NAME_HW10', 'dbname');
+
+//encoding
 mysqli_set_charset ($connection, 'utf8');
-
-include 'includes database.php';
-
-define ('DB_USERNAME_HW10', 'username');
-define ('DB_PW_HW10', 'password_og');
-define ('DB_HOSTNAME', 'hostname');
-define ('DB_NAME_HW10', 'dbname');
-=======
-//include('includes/database.php');
->>>>>>> 6b6df5d1c3047801cc3529b993b6aaa9949bd4d9
-
 
 /*
 *   CHECK IF THE FORM HAS BEEN SUBMITTED AND INSERT
 *   NEW USER INTO THE DATABASE
-
+*/
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $errors = [];
 //error messages for input form
+
     if (empty ($_POST['first_name'])) {
         $errors[] = 'You forgot to enter your first name';
     } else {
