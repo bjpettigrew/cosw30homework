@@ -1,5 +1,6 @@
 <?php
 // Add the database connection
+<<<<<<< HEAD
 
 mysqli_set_charset ($connection, 'utf8');
 
@@ -9,6 +10,9 @@ define ('DB_USERNAME_HW10', 'username');
 define ('DB_PW_HW10', 'password_og');
 define ('DB_HOSTNAME', 'hostname');
 define ('DB_NAME_HW10', 'dbname');
+=======
+//include('includes/database.php');
+>>>>>>> 6b6df5d1c3047801cc3529b993b6aaa9949bd4d9
 
 
 /*
