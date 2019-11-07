@@ -135,6 +135,8 @@ if($result) {
         <input type="password" id="password_confirm" name="password_confirm" value="<?php if (isset($_POST['password_confirm']))
          echo $_POST['password_confirm'];?>"><br>
 
+         <input type="hidden" name="user_id" value=",?php echo $id?>"><br>
+
         <button>Register</button>
     </form>
 
