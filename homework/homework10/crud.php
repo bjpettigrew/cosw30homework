@@ -73,20 +73,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         echo '<p>' . mysqli_error($connection) . '<br><br>Query: ' . $query . '</p>';
     }
-    mysqli_close($connection);
+    //mysqli_close($connection);
 
     //exit();
 
-    } else {
-        echo'<h1>Error!</h1>
-       <p class="error"><br>';
-    //foreach ($errors as $msg) {
-        //echo " - $msg<br>\n";
-      //}
-    echo '</p><p>Please try again.</p><p><br></p>';
+}
 
-    }
-//}
 /*
 *   QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
 */
@@ -114,30 +106,30 @@ if($result) {
     <form action="crud.php" method="POST">
         <label for="first_name">First Name</label>
         <input type="text" id="first_name" name="first_name" value="<?php if (isset($_POST['first_name'])) //or <?php echo $first_name; //end php>
-         echo $_POST['first_name'];?>"><br>
-         <?php if (isset($errors['first_name'])) echo $errors['first_name'];?><br>
+         echo $_POST['first_name']; ?>"><br>
+         <?php if (isset($errors['first_name'])) echo $errors['first_name']; ?><br>
 
 
         <label for="last_name">Last Name</label>
         <input type="text" id="last_name" name="last_name" value="<?php if (isset($_POST['last_name']))
-         echo $_POST['last_name'];?>"><br>
+         echo $_POST['last_name']; ?>"><br>
          <?php if(isset($errors['last_name'])) echo $errors['last_name']; ?><br>
 
         <label for="email">Email</label>
         <input type="email" id="email" name="email" value="<?php if (isset($_POST['email']))
-         echo $_POST['email'];?>"><br>
+         echo $_POST['email']; ?>"><br>
          <?php if (isset($errors['email'])) echo $errors['email'];?><br>
 
         <label for="password">Password</label>
         <input type="password" id="password" name="password" value="<?php if (isset($_POST['password']))
-         echo $_POST['password'];?>"><br>
+         echo $_POST['password']; ?>"><br>
          <?php if (isset($errors['password'])) echo $errors['password'];?><br>
 
         <!--Add a second password input so the user has to retype their password -->
 
         <label for="password_confirm">Confirm Password</label>
         <input type="password" id="password_confirm" name="password_confirm" value="<?php if (isset($_POST['password_confirm']))
-         echo $_POST['password_confirm'];?>"><br>
+         echo $_POST['password_confirm']; ?>"><br>
          <?php if (isset($errors['password_confirm'])) echo $errors['password_confirm'];?><br>
 
          <!--<input type="hidden" name="user_id" value="<?php //echo $id; ?>"><br>-->
@@ -148,10 +140,10 @@ if($result) {
 <?php
 //added ../ to database.php
     //require('database.php');  //connect to the db
-      // why is user_id YELLOW?
-    $query = "SELECT (user_id, first_name, last_name, email, password)
+
+    $query = "SELECT *
             FROM USER_PETTIGREW
-            ORDER BY first_name ASC";
+            ORDER BY first_name";
     $r = @mysqli_query($connection, $query);  //runs the query from db table USER_PETTIGREW
 
 
