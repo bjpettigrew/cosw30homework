@@ -19,6 +19,11 @@ mysqli_set_charset ($connection, 'utf8');
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $errors = [];
 //error messages for input form
+    //if(failed condition) {
+    // $errors[] = "Error message';
+    //}
+    }
+
 
     if (empty ($_POST['first_name'])) {
         $errors[] = 'You forgot to enter your first name';
@@ -57,6 +62,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     VALUES ('$fn', '$ln', '$e', '$pw')";
     $r = @mysqli_query($connection, $query);
     if ($r) {
+
+            //$mysqli_fetch_all($connection, $query);
+
         echo '<h1>Thank you!</h1>
             <p>You are now registered.</p><p><br></p>';
     } else {
@@ -105,8 +113,9 @@ if($result) {
     <h1>Create a New User</h1>
     <form action="crud.php" method="POST">
         <label for="first_name">First Name</label>
-        <input type="text" id="first_name" name="first_name" value="<?php if (isset($_POST['first_name']))
+        <input type="text" id="first_name" name="first_name" value="<?php if (isset($_POST['first_name'])) //or <?php echo $first_name; //end php>
          echo $_POST['first_name'];?>"><br>
+
 
         <label for="last_name">Last Name</label>
         <input type="text" id="last_name" name="last_name" value="<?php if (isset($_POST['last_name']))
@@ -150,6 +159,7 @@ if($result) {
                 <th align="left">Last Name</th>
                 <th align="left">Email</th>
                 <th align="left">Password</th>
+                <th align="left">Edit</th>
             </tr>
         </thead>
         <tbody>
@@ -165,6 +175,7 @@ if($result) {
                 <td align="left">' . $row['last_name'] . ' </td>
                 <td align="left">' . $row['email'] . '</td>
                 <td align="left">' . $row['password'] . '</td></tr>
+                <td align="left"><a href="update.php?id=' .$row['user_id']. '"></td>
             ';
             }
         echo '</tbody></table>';
