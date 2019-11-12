@@ -108,8 +108,12 @@ if($result) {
 <head>
     <title>My First CRUD</title>
     <style>
-        
-        div {
+        .main_container {
+            width 100%;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .form_container {
           border-style: ridge;  
           border-width: 50px; 
           border-color: #483d8b; 
@@ -139,7 +143,7 @@ if($result) {
           width: 75%%;
           align: center;
           color: #ffffff;
-          margin: 10% auto;
+          margin: 3% auto;
         }
       th  {
           border:5px solid #87cefa;
@@ -154,10 +158,10 @@ if($result) {
     </style>
 </head>
 <body>
-    
+    <div class="main_container">
     <h1>Register Here</h1>
 
-    <div>
+    <div class="form_container">
     <form action="crud.php" method="POST">
         <label for="first_name">First Name</label>
         <input type="text" id="first_name" name="first_name" value="<?php if (isset($_POST['first_name'])) //or <?php echo $first_name; //end php>
@@ -191,6 +195,7 @@ if($result) {
 
         <button>Register</button>
     </form>
+      </div>
       </div>
 <?php
 //added ../ to database.php
