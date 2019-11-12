@@ -108,18 +108,17 @@ if($result) {
 <head>
     <title>My First CRUD</title>
     <style>
-        .all {
-         border-style: ridge;  
+        
+        .input_form {
+          border-style: ridge;  
           border-width: 50px; 
           border-color: #483d8b; 
           background-color: #000080;
           padding: 10% 12.5%;
           color: #6495ED;
-        }
-        .input_form {
-         
           width: 75%;
           color: #ffffff;
+          align: center;
         }
         h1 {
             text-align: center;
@@ -136,8 +135,8 @@ if($result) {
           border-color: #483d8b; 
           background-color: #000080;
           table-layout: auto;
-          width: 100%;
-          margin: 10px auto;
+          width: 75%%;
+          align: center;
           color: #ffffff;
         }
       th  {
@@ -153,7 +152,7 @@ if($result) {
     </style>
 </head>
 <body>
-    <div class="all">
+    
     <h1>Register Here</h1>
 
     <div class="input_form">
@@ -243,6 +242,6 @@ if($result) {
 
 mysqli_close($connection);
 ?>
-</div>
+
 </body>
 </html>
