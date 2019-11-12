@@ -111,10 +111,12 @@ if($result) {
 
       table {
           border-style: ridge;  
-          border-width: 10%; 
+          border-width: 50px; 
           border-color: #483d8b; background-color: #000080;
           table-layout: auto;
-          width: 89%;
+          width: 75%;
+          margin: 10px; auto;
+          color: #ffffff;
         }
       th  {
           border:5px solid #87cefa;
