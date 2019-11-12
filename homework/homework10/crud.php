@@ -119,7 +119,7 @@ if($result) {
           width: 500px;
           color: #ffffff;
           align: center;
-         
+          margin: 3% auto;
         }
         h1 {
             text-align: center;
