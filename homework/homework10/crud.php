@@ -128,7 +128,7 @@ if($result) {
         h2 {
             text-align: center;
             color: #6495ED;
-        }
+    
         }
       table {
           border-style: ridge;  
