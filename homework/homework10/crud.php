@@ -108,11 +108,10 @@ if($result) {
 <head>
     <title>My First CRUD</title>
     <style>
-        form {
-            align: center;
-            width: 75%;
+        body {
+          padding: 5% auto;
         }
-        /*.input_form {
+        .input_form {
           border-style: ridge;  
           border-width: 50px; 
           border-color: #483d8b; 
@@ -123,7 +122,7 @@ if($result) {
           color: #ffffff;
           align: center;
           margin: 10% auto;
-        }*/
+        }
         h1 {
             text-align: center;
             color: #6495ED;
