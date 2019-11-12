@@ -9,6 +9,7 @@
 // Add the database connection
 
 include('database.php');
+include('update.php');
 
 //make db info into constants
 //define('DB_USERNAME_HW10', 'username');
