@@ -108,9 +108,7 @@ if($result) {
 <head>
     <title>My First CRUD</title>
     <style>
-        body {
-          padding: 5% auto;
-        }
+        
         div {
           border-style: ridge;  
           border-width: 50px; 
@@ -118,10 +116,10 @@ if($result) {
           background-color: #000080;
           padding: 10% 12.5%;
           color: #6495ED;
-          width: 75%;
+          width: 50%;
           color: #ffffff;
           align: center;
-          margin: 10% auto;
+          margin: 5% 25%;
         }
         h1 {
             text-align: center;
