@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 <?php
 // Add the database connection
 
@@ -100,6 +107,13 @@ if($result) {
 <html>
 <head>
     <title>My First CRUD</title>
+    <style>
+
+      table {border-style: ridge;  border-width: 150px; border-color: #8ebf42; background-color: #d9d9d9;}
+      th  {border:5px solid #095484;}   
+      td {border:20px groove #1c87c9;
+
+    </style>
 </head>
 <body>
     <h1>Create a New User</h1>
