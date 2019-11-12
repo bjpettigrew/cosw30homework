@@ -111,7 +111,7 @@ if($result) {
         body {
           padding: 5% auto;
         }
-        .input_form {
+        div {
           border-style: ridge;  
           border-width: 50px; 
           border-color: #483d8b; 
@@ -159,7 +159,7 @@ if($result) {
     
     <h1>Register Here</h1>
 
-    <div class="input_form">
+    <div>
     <form action="crud.php" method="POST">
         <label for="first_name">First Name</label>
         <input type="text" id="first_name" name="first_name" value="<?php if (isset($_POST['first_name'])) //or <?php echo $first_name; //end php>
