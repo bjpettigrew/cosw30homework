@@ -114,6 +114,7 @@ if($result) {
           border-color: #483d8b; 
           background-color: #000080;
           padding: 10% 12.5%;
+          color: #6495ED;
         }
         .input_form {
          
@@ -122,9 +123,11 @@ if($result) {
         }
         h1 {
             text-align: center;
+            color: #6495ED;
         }
         h2 {
             text-align: center;
+            color: #6495ED;
         }
         }
       table {
@@ -133,7 +136,7 @@ if($result) {
           border-color: #483d8b; 
           background-color: #000080;
           table-layout: auto;
-          width: 75%;
+          width: 100%;
           margin: 10px auto;
           color: #ffffff;
         }
