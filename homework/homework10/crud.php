@@ -109,9 +109,19 @@ if($result) {
     <title>My First CRUD</title>
     <style>
 
-      table {border-style: ridge;  border-width: 150px; border-color: #8ebf42; background-color: #d9d9d9;}
-      th  {border:5px solid #095484;}   
-      td {border:20px groove #1c87c9;
+      table {
+          border-style: ridge;  
+          border-width: 150px; 
+          border-color: #8ebf42; background-color: #d9d9d9;
+          table-layout: auto;
+          width: 70%;
+        }
+      th  {
+          border:5px solid #095484;
+        }   
+      td {
+          border:20px groove #1c87c9;
+      }
 
     </style>
 </head>
