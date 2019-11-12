@@ -116,10 +116,10 @@ if($result) {
           background-color: #000080;
           padding: 10% 12.5%;
           color: #6495ED;
-          width: 50%;
+          width: 500px;
           color: #ffffff;
           align: center;
-          margin: 5% 25%;
+         
         }
         h1 {
             text-align: center;
