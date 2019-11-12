@@ -111,16 +111,17 @@ if($result) {
 
       table {
           border-style: ridge;  
-          border-width: 150px; 
+          border-width: 100px; 
           border-color: #8ebf42; background-color: #d9d9d9;
           table-layout: auto;
-          width: 70%;
+          width: 100%;
         }
       th  {
           border:5px solid #095484;
         }   
       td {
           border:20px groove #1c87c9;
+          width: 15%;
       }
 
     </style>
@@ -199,7 +200,7 @@ if($result) {
                 <td align="left">' . $row['last_name'] . ' </td>
                 <td align="left">' . $row['email'] . '</td>
                 <td align="left">' . $row['password'] . '</td></tr>
-                <td align="left"><a href="update.php?id=' .$row['edit']. '">Update</a></td>
+                <td align="left"><a href="update.php' .$row['edit']. '">Update</a></td>
             ';
             }
         echo '</tbody></table>';
