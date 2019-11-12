@@ -108,11 +108,21 @@ if($result) {
 <head>
     <title>My First CRUD</title>
     <style>
+        .input_form {
+          border-style: ridge;  
+          border-width: 50px; 
+          border-color: #483d8b; 
+          background-color: #000080;
+          width: 100%;
+          color: #ffffff;
+        }
 
+        }
       table {
           border-style: ridge;  
           border-width: 50px; 
-          border-color: #483d8b; background-color: #000080;
+          border-color: #483d8b; 
+          background-color: #000080;
           table-layout: auto;
           width: 75%;
           margin: 10px; auto;
@@ -132,6 +142,8 @@ if($result) {
 </head>
 <body>
     <h1>Create a New User</h1>
+
+    <div class="input_form">
     <form action="crud.php" method="POST">
         <label for="first_name">First Name</label>
         <input type="text" id="first_name" name="first_name" value="<?php if (isset($_POST['first_name'])) //or <?php echo $first_name; //end php>
@@ -165,7 +177,7 @@ if($result) {
 
         <button>Register</button>
     </form>
-
+      </div>
 <?php
 //added ../ to database.php
     //require('database.php');  //connect to the db
