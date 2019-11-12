@@ -84,7 +84,7 @@ if($result) {
 </head>
 <body>
     <h1>Update User</h1>
-    <form action="update.php" method="POST">
+    <form action="update.php?id=" method="POST">
         <label for="first_name">First Name</label>
         <input type="text" id="first_name" name="first_name" value="<?php echo $first_name;?>"><br>
 
