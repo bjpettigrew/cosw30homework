@@ -155,6 +155,7 @@ if($result) {
       }
       .update {
             color: #ffffff;
+            padding: auto 2%;
       }
 
     </style>
