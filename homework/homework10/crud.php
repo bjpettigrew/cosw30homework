@@ -33,31 +33,31 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     if (empty ($_POST['first_name'])) {
-        $errors['first_name'] = 'You forgot to enter your first name';
+        $errors['first_name'] = '<p class="error">You forgot to enter your first name</p>';
     } else {
         $fn = trim($_POST['first_name']);
     }
 
     if (empty ($_POST['last_name'])) {
-        $errors['last_name'] = 'You forgot to enter your last name';
+        $errors['last_name'] = '<p class="error">You forgot to enter your last name</p>';
     } else {
         $ln = trim($_POST['last_name']);
     }
 
     if (empty ($_POST['email'])) {
-        $errors['email'] = '<p> forgot to enter your email address</p>';
+        $errors['email'] = '<p class="error"> You forgot to enter your email address</p>';
     } else {
         $e = trim($_POST['email']);
     }
 
     if (!empty ($_POST['password'])) {
         if ($_POST['password'] != $_POST['password_confirm']) {
-            $errors['password_confirm'] = 'Your password does not match confirmation password';
+            $errors['password_confirm'] = '<p class="error">Your password does not match confirmation password</p>';
         } else {
             $pw = trim($_POST['password']);
         }
     } else {
-        $errors['password'] = 'You forgot to enter your password';
+        $errors['password'] = '<p class="error">You forgot to enter your password</p>';
     }
 
     if ( empty($errors)) {
