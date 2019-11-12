@@ -111,17 +111,16 @@ if($result) {
 
       table {
           border-style: ridge;  
-          border-width: 100px; 
-          border-color: #8ebf42; background-color: #d9d9d9;
+          border-width: 10%; 
+          border-color: #483d8b; background-color: #000080;
           table-layout: auto;
-          width: 100%;
+          width: 89%;
         }
       th  {
-          border:5px solid #095484;
+          border:5px solid #87cefa;
         }   
       td {
-          border:20px groove #1c87c9;
-          width: 15%;
+          border:20px groove #87cefa;
       }
 
     </style>
@@ -199,8 +198,8 @@ if($result) {
                 <td align="left">' . $row['first_name'] . '</td>
                 <td align="left">' . $row['last_name'] . ' </td>
                 <td align="left">' . $row['email'] . '</td>
-                <td align="left">' . $row['password'] . '</td></tr>
-                <td align="left"><a href="update.php' .$row['edit']. '">Update</a></td>
+                <td align="left">' . $row['password'] . '</td>
+                <td align="left"><a href="update.php' .$row['edit']. '">Update</a></td></tr>
             ';
             }
         echo '</tbody></table>';
