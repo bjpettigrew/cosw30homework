@@ -124,6 +124,9 @@ if($result) {
       td {
           border:20px groove #87cefa;
       }
+      .update {
+            color: #ffffff;
+      }
 
     </style>
 </head>
@@ -201,7 +204,7 @@ if($result) {
                 <td align="left">' . $row['last_name'] . ' </td>
                 <td align="left">' . $row['email'] . '</td>
                 <td align="left">' . $row['password'] . '</td>
-                <td align="left"><a href="update.php' .$row['edit']. '">Update</a></td></tr>
+                <td align="left"><a href="update.php' .$row['edit']. '">"<p class="update">Update</p></a></td></tr>
             ';
             }
         echo '</tbody></table>';
