@@ -175,7 +175,7 @@ if($result) {
                 <td align="left">' . $row['last_name'] . ' </td>
                 <td align="left">' . $row['email'] . '</td>
                 <td align="left">' . $row['password'] . '</td></tr>
-                <td align="left"><a href="update.php =' .$row['user_id']. '"></td>
+                <td align="left"><a href="update.php?id=' .$row['user_id']. '"></td>
             ';
             }
         echo '</tbody></table>';
