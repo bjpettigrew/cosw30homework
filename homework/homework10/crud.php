@@ -45,7 +45,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if (empty ($_POST['email'])) {
-        $errors['email'] = 'You forgot to enter your email address';
+        $errors['email'] = '<p> forgot to enter your email address</p>';
     } else {
         $e = trim($_POST['email']);
     }
@@ -72,8 +72,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             //$mysqli_fetch_all($connection, $query);
 
-        echo '<h1>Thank you!</h1>
-            <p>You are now registered.</p><p><br></p>';
+        echo '<h1 class="under_form">Thank you!</h1>
+            <h2>You are now registered.</h2><p><br></p>';
     } else {
         echo '<h1>System Error</h1>
             <p class="error">You could not be registered at this time due to a system error.  We apologize for any inconvenience</p>';
@@ -132,7 +132,9 @@ if($result) {
         h2 {
             text-align: center;
             color: #6495ED;
-    
+        }
+        .error {
+            color: #ff00ff;
         }
       table {
           border-style: ridge;  
@@ -207,7 +209,7 @@ if($result) {
     $r = @mysqli_query($connection, $query);  //runs the query from db table USER_PETTIGREW
 
 
-    echo '<h2>Output a List of Users</h2>';
+    echo '<h2>List of Registered Participants</h2>';
 
     if ($r) {
 
