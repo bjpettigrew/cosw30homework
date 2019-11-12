@@ -119,12 +119,12 @@ if($result) {
           border-width: 50px; 
           border-color: #483d8b; 
           background-color: #000080;
-          padding: 10% 12.5%;
+          padding: 5% 12.5%;
           color: #6495ED;
           width: 500px;
           color: #ffffff;
           align: center;
-          margin: 3% auto;
+          margin: 1% auto;
         }
         h1 {
             text-align: center;
