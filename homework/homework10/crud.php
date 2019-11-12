@@ -119,6 +119,7 @@ if($result) {
           width: 75%;
           color: #ffffff;
           align: center;
+          margin: 10% auto;
         }
         h1 {
             text-align: center;
@@ -138,6 +139,7 @@ if($result) {
           width: 75%%;
           align: center;
           color: #ffffff;
+          margin: 10% auto;
         }
       th  {
           border:5px solid #87cefa;
