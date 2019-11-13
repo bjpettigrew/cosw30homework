@@ -232,7 +232,7 @@ if($result) {
                 <td align="left">' . $row['last_name'] . '</td>
                 <td align="left">' . $row['email'] . '</td>
                 <td align="left">' . $row['password'] . '</td>
-                <td align="left"><a href="update2.php=' .$row['edit']. '"><p class="update">Update</p></a></td></tr>
+                <td align="left"><a href="update2.php=?id' .$row['edit']. '"><p class="update">Update</p></a></td></tr>
             ';
             }
         echo '</tbody></table>';
