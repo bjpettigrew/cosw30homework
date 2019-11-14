@@ -57,7 +57,7 @@ $update_query = "UPDATE USER_PETTIGREW
 /*
 *   QUERY THE DATABASE FOR THE USER THAT HAS THE GET ID
 */
-$id = $_POST['user_id'];
+//$id = $_POST['user_id'];
 // Create your query
 $query = "SELECT * FROM USER_PETTIGREW WHERE user_id = $id";
 // Run your query
