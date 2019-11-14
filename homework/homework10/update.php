@@ -1,6 +1,7 @@
 <?php
 // Add the database connection
 include('database.php');
+include('header.php');
 $errors = [];
 /*
 *   CHECK IF THE URL HAS A $_GET VARIABLE CALLED ID
@@ -73,7 +74,7 @@ if($result) {
     $email = $user ['email'];
     $password = $user ['password'];
 } else {
-    errors [] = 'Error.  Please re-enter information';
+    $errors[] = 'Error.  Please re-enter information';
 }
 ?>
 
@@ -84,21 +85,23 @@ if($result) {
 </head>
 <body>
     <h1>Update User</h1>
+    <div class="form_container">
     <form action="update.php?id=" method="POST">
         <label for="first_name">First Name</label>
-        <input type="text" id="first_name" name="first_name" value="<?php echo $first_name;?>"><br>
+        <input type="text" id="first_name" name="first_name" value="<?php echo $first_name;?>"><br><br>
 
         <label for="last_name">Last Name</label>
-        <input type="text" id="last_name" name="last_name" value="<?php echo $last_name;?>"><br>
+        <input type="text" id="last_name" name="last_name" value="<?php echo $last_name;?>"><br><br>
 
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" value="<?php echo $email;?>"><br>
+        <input type="email" id="email" name="email" value="<?php echo $email;?>"><br><br>
 
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" value="<?php echo $password;?>"><br>
+        <input type="password" id="password" name="password" value="<?php echo $password;?>"><br><br>
 
         <button>Update User</button>
     </form>
+    </div>
 </body>
 </html>
 
