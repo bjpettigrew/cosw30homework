@@ -19,6 +19,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
+    
+
     // Validate the form data
     // Check if the user's email and password are in the database
 
@@ -29,7 +31,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 
     $result = mysqli_query($connection, $query);
     // If they are, log them in
-    if($result) {
+    if(mysqli_num_rows($result)) {
         //grabs result from database if there is one
         $user = mysqli_fetch_assoc($result);
         // Add their user id to the $_SESSION
@@ -47,7 +49,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     // If they aren't, show the log in form with an error
     } else { 
 
-        echo "You have made an error - try again!";
+        echo "You have made an error!";
 
     }
 } // END of $_SERVER['REQUEST_METHOD']
