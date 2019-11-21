@@ -46,6 +46,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit;
     // If they aren't, show the log in form with an error
     } else { 
+        echo "You have made an error - try again!";
     }
 } // END of $_SERVER['REQUEST_METHOD']
 
